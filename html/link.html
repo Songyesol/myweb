@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>link.html</title>
+        <style>
+            h1{
+                color:rgb(224, 112, 131);
+                font-weight: 300;
+
+            }
+            h2{
+                color: rgb(235, 75, 187);
+                font-size: large;
+            }
+        </style>
+     
+    </head>
+
+    <body style="background: rgb(250, 203, 194);"> 
+        <!--body부분에 style을 넣으면 전체배경화면 색을 변경-->
+        <h1>오늘점심은 컵라면과 김밥입니다✨.</h1>
+        <h2>🍜라면인건가🍜</h2>
+        <h2 style = "background: rgb(253, 240, 50);">배경색 입니다.</h2>
+        <!--엘리먼트 내에 style을 넣으면 해당 문장에만 배경색 적용됨-->
+        
+        <b>Lorem ipsum dolor sit amet consectetur,</b><br>
+        <Strong>adipisicing elit.</Strong><br>
+        <i>A omnis, iusto qui excepturi,</i> <br>
+        <em>atque illo,  culpa officia unde</em> <br>
+        <mark>ipsam totam perferendis </mark><br>
+        <small>at laboriosam molestias facilis</small><br> 
+        <del>ipsa officiis</del> <br>
+        <ins>ipsa officiis</ins> <br>
+        cupiditate <sub>dolorem</sub> nam.<br>
+        cupiditate <sup>dolorem</sup> nam.<br>
+
+       <br><br><br><br>
+
+       <abbr>Lorem ipsum dolor sit amet</abbr> <br>
+       <address>consectetur adipisicing elit.</address><br> 
+       <bdo>Obcaecati at maiores molestiae et</bdo> <br>
+       <blockquote>delectus soluta, esse quibusdam,</blockquote><br> 
+       <city>perspiciatis</city> harum distinctio <br>
+       <q>veritatis repellat culpa debitis 
+       iure neque explicabo possimus aliquam quis!</q><br>
+       
+       <script>
+            //script라는 태그는 자바스크립트 문법을 사용할 수 있게 해주는 tag
+            
+                var h2Tag = document.getElementsByTagName('h2');
+                //엘리먼트를 가져 올 때 tagname으로 가져옴
+                h2Tag[0].style.color='green';
+            
+        </script>
+    </body>
+
+</html>

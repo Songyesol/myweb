@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/table.html</title>
+</head>
+<body>
+    <table border="1"> <!--굵기 1의 경계선을 만들겠다.-->
+        <tr> <!--라인을 만들때-->
+            <td>Company</td> <!--컬럼을 넣고 싶을때-->
+            <td>Contact</td>
+            <td>Country</td>
+            <td>Address</td>
+        </tr>
+        <tr>
+            <td>다음-카카오</td>
+            <td>사장님</td>
+            <td>한국</td>
+            <td>제주</td>
+        </tr>
+        <tr>
+            <td>NAVER</td>
+            <td>개발자</td>
+            <td colspan="2">일본 : 도쿄</td><!--column을 가로로 확장할때 쓰는 속성값-->
+        </tr>
+        <tr>
+            <td>상위</td>
+            <td rowspan= "2" colspan="3">개발회사 정보</td><!--row를 확장할때 rowspan-->
+        </tr>
+        <tr>
+            <td>하위</td>
+        </tr>
+
+    </table>
+</body>
+</html>
