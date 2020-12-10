@@ -1,0 +1,81 @@
+use visual studio code default로 바꾸기 
+launch git bash 체크 
+
+git init
+git add * (변경된 파일 전부 추가)
+
+C:\web> git commit -m "first commit"
+Author identity unknown
+
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'admin@YD03-07.(none)')
+
+PS C:\web> git config --global user.email "yellowsys92@naver.com"
+PS C:\web> git config --global user.name "songys"
+PS C:\web> git commit -m "first commit"
+[master (root-commit) 8a47038] first commit
+ 9 files changed, 219 insertions(+)
+ create mode 100644 css/style.css
+ create mode 100644 html/css.html
+ create mode 100644 html/link.html
+ create mode 100644 html/links.html
+ create mode 100644 html/main.html
+ create mode 100644 html/table.html
+ create mode 100644 images/image1.PNG
+ create mode 100644 index.html
+ create mode 100644 "\354\210\230\354\227\205\353\202\264\354\232\251 \355\225\204\352\270\260/1209.txt" 
+ --커밋(local 저장소에 저장 하는과정이였음)
+ 
+ PS C:\web> git branch -M main
+PS C:\web> git remote add origin https://github.com/Songyesol/myweb.git 
+PS C:\web> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (15/15), 599.72 KiB | 19.35 MiB/s, done.
+Total 15 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Songyesol/myweb.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+ --push(원격저장소에 커밋한 자료를 올리는 과정)
+ 
+ 
+ >>>>> 수정후 다시 커밋하기 
+git add *
+git commit -m "커밋내용"
+git push -u origin main
+ 
+ 
+>>>>> 집에서 원격저장소에 올라간 git 복제받는 방법 <<<<<<<
+ D:\>mkdir web
+
+D:\>cd wdb
+지정된 경로를 찾을 수 없습니다.
+
+D:\>cd web
+
+D:\web>pwd
+'pwd'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+D:\web>git clone https://github.com/Songyesol/myweb.git
+Cloning into 'myweb'...
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 18 (delta 2), reused 18 (delta 2), pack-reused 0
+Receiving objects: 100% (18/18), 599.97 KiB | 197.00 KiB/s, done.
+Resolving deltas: 100% (2/2), done.
+
+
+>> 수정된 내용 다시 pull 받는 순서
+해당 디스크내 git을 pull 받는 디렉토리로 이동하여 (cd 디렉토리명)
+git pull
