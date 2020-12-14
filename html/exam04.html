@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/exam04.html</title>
+</head>
+<body>
+    <form action="exam04.jsp" method="GET">
+        <fieldset>
+            <legend>개인 정보 입력</legend>
+            <p>아이디: <input type="text" name="user_id" id="user_id">
+                        <button>ID중복검사</button></p>
+            <p>생년월일: <input type="date" name="user_birth" id="user_birth"></p>
+            <p>성별: <input type="radio" name="sex" value="남자" checked>남자
+                     <input type="radio" name="sex" value="여자">여자</p>
+            <p>이메일: <input type="email" name="email"></p>
+            <p>메일 수신: <input type="radio" name="choice" value="수신동의" checked> 수신동의
+                         <input type="radio" name="choice" value="수신거부"> 수신거부</p>
+            <p>핸드폰: <select name="number1" id="number1">
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="019">019</option>
+            </select>
+            - <input type="text" name="number2">
+            - <input type="text" name="number3">
+            </p>    
+            <p>직업: <select name="job" id="job">
+                <option value="1">학생</option>
+                <option value="2">직장인</option>
+                <option value="3">취업준비생</option>
+                <option value="4">무직</option>
+            </select>
+            </p>
+            <p>취미: <input type="checkbox" name="hobby" id="hobby" value="쇼핑">쇼핑
+                    <input type="checkbox" name="hobby" id="hobby" value="인터넷">인터넷
+                    <input type="checkbox" name="hobby" id="hobby" value="음악감상">음악감상
+                    <input type="checkbox" name="hobby" id="hobby" value="독서">독서
+                    <input type="checkbox" name="hobby" id="hobby" value="스포츠">스포츠
+            </p>
+            <p>자기소개: <textarea name="self_intro" id="self_intro" cols="60" rows="10"></textarea></p>
+        </fieldset>
+
+        <p></p>
+        <input type="submit" value="등록">
+        <input type="reset" value="초기화">
+    </form>
+</body>
+</html>
