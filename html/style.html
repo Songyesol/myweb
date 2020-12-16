@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> html/style.html</title>
+    <style>
+        h1{
+            color: white;
+            font-size: 15px;
+            background: navy;
+        }
+        /* header > h1 자식태그중에 지정 */
+        header > h1 { 
+            background: olive;
+        }
+        /* content 의 하위태그 중 h1 태그 지정  */
+        content h1 {
+            font-size: 10px;
+        }
+       
+        /* 태그 속성 중 id값이 first인 것 👇👇👇👇*/
+        /* id값은 unique해야함. id값 중복안됌. */
+        #first {
+            color: orange;
+        }
+
+        /* class 👇👇👇👇*/
+        /* class는 여러개 있을 수 있음 */
+        .first {
+            color: peachpuff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>스타일 지정1</h1>
+        <h1 id ="first">스타일 지정1-1</h1>
+        <!--header/div의 자식태그 h1-->
+        <div> 
+            <h1 class = "first">스타일 지정1-2</h1>
+        </div>
+
+    </header>
+    <content>
+        <h1>스타일 지정2</h1>
+        <h1 class = "first">스타일 지정2-2</h1>
+        <div>
+            <h1 class = "first">스타일 지정2-3</h1>
+        </div>
+    </content>
+        
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/selector.html</title>
+    <style>
+        * {
+            color: rgb(133, 6, 133);
+            font-size: 13px;
+        }
+
+        h1{
+            background: palevioletred;
+        }
+        .selector {
+            color: blue;
+            background: yellowgreen;
+        }
+        #id {
+            color: blue;
+            background: pink;
+        }
+        #id2{ 
+            color: navy;
+            background-color: orchid;
+        }
+        h2 #id2 {
+            color: rgb(129, 129, 209);
+            background-color: rgb(185, 22, 57);
+        }
+    </style>
+</head>
+<body>
+   <h1>Universal Selector</h1> 
+   <h1 class = "selector">Universal Selector 2222 </h1> 
+
+   <h2>모두 같은 색상, 같은 크기</h2>
+   <h2 class = "selector">모두 같은 색상, 같은 크기 2222 </h2>
+   <h2 id = "id2">ID2 선택자</h2>
+   <h2 id = "id2">ID2 선택자</h2>
+
+
+   <h3>전체적으로 동시에 스타일 적용</h3>
+   <h3 id = "id" > ID 선택자 </h3>
+   <p id = "id">ID 선택자</p>
+   <p>모든 데이터에 적용</p>
+</body>
+</html>
