@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/input.html</title>
+    <style>
+        /*type의 시작값이 't'로 시작하면 백그라운드 블라블라~*/
+       /* [type^='t']{
+            background-color: rgb(176, 49, 235);
+        } */
+        input[type="text"]{
+            background-color: thistle;
+        }
+        h1[text] {
+            color: antiquewhite;
+            background: sandybrown;
+        }
+        p[text] {
+            color: blue;
+            background: yellow;
+        }
+        h1[text="attr3"] {
+            color: green;
+            background: hotpink;
+        }
+    </style>
 </head>
 <body>
     <form action="input.jsp" method="GET">
@@ -11,8 +32,15 @@
         <!--name="~"에 들어가는 내용이 parameter명-->
         <br> 아이디: <input type="text" name="user_id" id="user_id">
         <br> 비밀번호: <input type="password" name="user_pw" id="user_pw">
+        <p></p>
         <br> <input type="submit" value="입력"> <!--value는 초기값 지정-->
         <input type="reset" value="취소">
     </form>
+
+    <h1 text = "attr1">text 속성 이름 선택자</h1>
+    <h1 text = "attr2">text 속성 이름 선택자</h1>
+    <h1 text = "attr3">text 속성 이름 선택자</h1>
+    <p text = "attr3">text 속성 이름 선택자</p>
+    <p>속성 선택 없음</p>
 </body>
 </html>

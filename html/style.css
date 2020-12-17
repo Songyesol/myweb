@@ -1,0 +1,26 @@
+/*html/style.css*/
+h1{
+    color: white;
+    font-size: 15px;
+    background: navy;
+}
+/* header > h1 자식태그중에 지정 */
+header > h1 { 
+    background: olive;
+}
+/* content 의 하위태그 중 h1 태그 지정  */
+content h1 {
+    font-size: 10px;
+}
+
+/* 태그 속성 중 id값이 first인 것 👇👇👇👇*/
+/* id값은 unique해야함. id값 중복안됌. */
+#first {
+    color: orange;
+}
+
+/* class 👇👇👇👇*/
+/* class는 여러개 있을 수 있음 */
+.first {
+    color: peachpuff;
+}
