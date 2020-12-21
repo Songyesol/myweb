@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/boxmodel.html</title>
+    <style>
+        article {
+            border-width: 5px;
+            border-style: dashed;
+            border-color: aquamarine;
+        }
+        div {
+            border: 5px solid rgb(104, 104, 235);
+            background-color: rgb(198, 236, 108);
+            border-radius: 10px;
+            box-shadow: 10px 10px 50px rgba(232, 252, 121, 0.781);
+            /* padding-top : 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding: 10px 10px 10px 10px;*/
+            padding: 10% 10%;
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            /* margin: 10px 5px;  */
+            /*padding과 margin은 top right bottom left 여백을 따로 지정할 수 있음*/ 
+            /*나열하지 않고 요약식으로 사용할 있는데 그때의 순서는 위와 같으며 
+            만약 픽셀크기를 2개만 적는다면 첫번째 크기는 위,아래 두번째 크기는 왼쪽 오른쪽 크기이다*/
+            }
+    </style>
+</head>
+<body>
+    <article>
+        <div>Hello</div>
+    </article>
+</body>
+</html>

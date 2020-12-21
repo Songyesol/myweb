@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 30px;
+            height: 30px;
+            color: white;
+            background-color: lightsalmon;
+            margin-bottom: 10px;
+        }
+        .container {
+            background-color: lemonchiffon;
+            position: static;
+            left: 10px;
+            top: 10px
+        }
+        .box {
+            background-color: lightblue;
+            position: fixed; 
+            /*relative = static(원래있어야할 위치 기본값) 기준으로 왼쪽 위쪽 10x정도 옮긴상태*/
+            /*absolute = 박스를 포함하고 있는 article을 기준으로 왼쪽으로 10px 위쪽 10px 옮긴상태*/
+            /*sticky = 본래 지정된 자리에서 고정되어 스크롤을 내리거나 올려도 위치가 일정하다 */
+            /*fixed = 화면 상단에 위치하게 되며 페이지 내에서 절대적인 고정위치 /스크롤을 내리거나 올려도 그자리에 유지 */
+            /* left: 10px; */
+            top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <article class='container'>
+        <div></div>
+        <div class='box'>Box</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </article>
+</body>
+</html>

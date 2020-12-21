@@ -9,7 +9,7 @@
        /* [type^='t']{
             background-color: rgb(176, 49, 235);
         } */
-        input[type="text"]{
+        /* input[type="text"]{
             background-color: thistle;
         }
         h1[text] {
@@ -23,24 +23,87 @@
         h1[text="attr3"] {
             color: green;
             background: hotpink;
+        } */
+    
+        div#login {
+            width: 60%;
+            border-radius: 10px;
+            background-color: rgb(253, 255, 245);
+            padding: 20px;
+        }
+        input[type=text],select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 9px 0;
+            display: inline-block;
+            border-radius: 10px;
+            border: 2px solid #cccccc;
+            box-sizing: border-box;
+        }
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 9px 0;
+            display: inline-block;
+            border-radius: 10px;
+            border: 2px solid #cccccc;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            font-size: 20px;
+            font-weight: bolder;
+            width: 100%;
+            padding: 14px 20px;
+            color: white;
+            background-color: rgb(88, 231, 176);
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+
+        }
+        input[type=submit]:hover {
+            background-color: rgb(74, 172, 211);
         }
     </style>
 </head>
 <body>
-    <form action="input.jsp" method="GET">
-        사용자명: <input type="text" name="user_name" id="user_name">
-        <!--name="~"에 들어가는 내용이 parameter명-->
-        <br> 아이디: <input type="text" name="user_id" id="user_id">
-        <br> 비밀번호: <input type="password" name="user_pw" id="user_pw">
-        <p></p>
-        <br> <input type="submit" value="입력"> <!--value는 초기값 지정-->
-        <input type="reset" value="취소">
-    </form>
+    <div id="header">  
+        <h2>Sing Up with us!</h2>
+    </div>
+    <div id="login">
+        <form action="input.jsp" method="GET">
+            <label for="user_name">사용자명</label>
+            <input type="text" name="user_name" id="user_name" placeholder="이름을 입력하세요.">
+            <!--name="~"에 들어가는 내용이 parameter명-->
+            <label for="user_id">아이디</label>
+            <input type="text" name="user_id" id="user_id" placeholder="아이디를 입력하세요.">
+            <label for="user_pw">비밀번호</label>
+            <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호를 입력하세요.">
+            <label for="user_city">지역설정</label>
+            <select name="user_city" id="user_city">
+                <option value="서울">서울</option>
+                <option value="부산">부산</option>
+                <option value="대구">대구</option>
+                <option value="경기">경기</option>
+                <option value="충북">충북</option>
+                <option value="충남">충남</option>
+                <option value="강원">강원</option>
+                <option value="경북">경북</option>
+                <option value="경남">경남</option>
+                <option value="전북">전북</option>
+                <option value="전남">전남</option>
+                <option value="제주">제주</option>
+            </select>
+            <input type="submit" value="입  력"> <!--value는 초기값 지정-->
+            
+        </form>
+    </div>
 
-    <h1 text = "attr1">text 속성 이름 선택자</h1>
+    <!-- <h1 text = "attr1">text 속성 이름 선택자</h1>
     <h1 text = "attr2">text 속성 이름 선택자</h1>
     <h1 text = "attr3">text 속성 이름 선택자</h1>
     <p text = "attr3">text 속성 이름 선택자</p>
-    <p>속성 선택 없음</p>
+    <p>속성 선택 없음</p> -->
 </body>
 </html>
