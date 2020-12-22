@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html2/navigationvar.html</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+        }
+        #horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        #horizontal > li {
+            float: left;
+        }
+        #horizontal > li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active1) {
+            background-color: #111;
+        }
+
+        .active1 {
+            background-color: #4CAF50;
+            }
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        li a.active2{
+            background-color: #4caf50;
+            color: white;
+        }
+        li a:hover:not(.active2) {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul id="horizontal">
+        <li><a class="active1" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float:right"><a href="#about">About</a></li>
+    </ul>
+    <h2>Vertical Navigation Bar</h2>
+    <ul>
+        <li><a class="active2" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    
+</body>
+</html>
