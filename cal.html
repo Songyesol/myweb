@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal.html</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        
+        let h1Tag = document.createElement('h1');
+        h1Tag.innerHTML = '2020월 12월'
+        document.getElementById('show').append(h1Tag);
+
+        let days = ['Sun','Mon','Tue','Wed','Thr','Fri','Sat'];
+        let dates = [];
+        for (let i=1; i<=31; i++) {
+            dates.push(i); //순서대로 배열에 넣어줌
+        }
+        
+        let tableTag = document.createElement('table');
+        tableTag.setAttribute('border','1');
+        tableTag.setAttribute('id','tbl');
+        document.getElementById('show').append(tableTag);
+        
+        let trTag = document.createElement('tr');
+        
+        //달력상단 요일 표시 
+        days.forEach(createHeader);
+
+        //요일 하단 일자 표시
+        dates.forEach(createData);
+
+        function createHeader(a,b,c ) {
+            let thTag = document.createElement('th');
+            thTag.innerHTML = a;
+            trTag.append(thTag);
+            tableTag.append(trTag);
+        }
+
+        function createData(item, idx, ary){
+            // if (idx == 0 ) {
+            //     tdTag=document.createElement('td');
+            //     tdTag.innerHTML='';
+            //     trTag.append(tdTag);
+            //     tdTag=document.createElement('td');
+            //     tdTag.innerHTML='';
+            //     trTag.append(tdTag);
+            // }
+            if(idx % 7 == 0 ){
+            trTag = document.createElement('tr');
+            }
+
+            let tdTag = document.createElement('td');
+            tdTag.innerHTML = item;
+            trTag.append(tdTag);
+            tableTag.append(trTag);
+        }
+
+        
+        
+    </script>
+</body>
+</html>

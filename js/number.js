@@ -1,40 +1,17 @@
 //object.html - number.js
+let x = 10; //정수타입이 들어오면 정수연산, 실수타입이 들어오면 실수연산.
+let y = '5';
 
-//990101-1234567 (남)
-//990102-2345678 (여)
-//000201-3456789 (남)
-//000301-4567890 (여)
+let result = x/y;
+let result2 =x+parseFloat(y); 
+result2=x/0;
+console.log(result); // 결과 1020 --> 더하기는 숫자+문자열은 문자열로 인식 
+                        // 곱하기* 나누기/는 자동으로 숫자로 인식함.
+console.log(result2);
 
-//2000년 이전, 이후 구분 ->1,3은 남자
-//2000년 이전 이후, 구분 -> 2,4는 여자
-
-let numbers = '990101-1234567';
-numbers += '  990102-2345678';
-numbers += '  000201-3456789';
-numbers += '  000301-4567890';
-numbers += '  '
-let numAry = numbers.split('  ');
-for(nums of numAry) {
-    result = getGender(nums);
-    console.log('결과: ' + result);
+function sum() {
+    let num1 = document.getElementById('num1').value;
+    let num2 = document.getElementById('num2').value;
+    console.log(parseInt(num1)+parseInt(num2)); 
+    //얘네가 가져오는 값은 string 타입이기 때문에 int형으로 바꾸어주어야한다.
 }
-
-function getGender(num) {
-    let fNum = num.replace('-','').substr(6,1);
-    if(num.substr(0,2) =='99' && fNum== '1'){
-        return '2000년 이전 출생 남성입니다';
-    } else if (num.substr(0,2) =='00' && fNum== '3'){
-        return '2000년 이후 출생 남성입니다.';  
-    } else if (num.substr(0,2) =='99' && fNum == '2'){
-            return '2000년 이전 출생 여성입니다';
-    } else if (num.substr(0,2) =='00' && fNum == '4'){
-            return '2000년 이후 출생 여성입니다.';
-    }
-        
-    
-    
-
-
-}
-
-

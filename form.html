@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form.html</title>
+</head>
+<body>
+<table border="1"id = 'tbl'>
+    <tr>
+        <td><label for="id"></label>
+            <input type="checkbox" name = 'id' id = "id"></td> 
+            
+        <td>홍길동</td>
+        <td>20세</td>
+        <td>독서</td>
+        <td><button>OK</button></td>
+    </tr>
+</table>
+
+<script>
+    let members = [];
+    
+    let member = {};
+    member.name = '홍길순';
+    member.age = '21세';
+    member.hobby = '음악감상';
+    members.push(member);
+
+    let member1 = {};
+    member1.name = '홍길영';
+    member1.age = '24세';
+    member1.hobby = '명상';
+    members.push(member1);
+
+    let member2 = {};
+    member2.name = '홍길자';
+    member2.age = '25세';
+    member2.hobby = '독서';
+    members.push(member2);
+
+    console.log(members);
+
+    
+    
+    members.forEach(createData);
+
+    function createData (a, b){ 
+        let trTag = document.createElement('tr');
+        document.getElementById('tbl').append(trTag);
+
+        let tdTag = document.createElement('td');
+        trTag.append(tdTag);
+
+        let labelTag = document.createElement('label');
+        labelTag.setAttribute('for', 'id');
+        tdTag.append(labelTag);
+
+        let inputTag = document.createElement('input');
+        inputTag.setAttribute('type', 'checkbox');
+        inputTag.setAttribute('name' ,'id');
+        inputTag.setAttribute('id','id');
+        tdTag.append(inputTag);
+        
+    for ( field in a ){
+        let tdTag1=document.createElement('td');
+        tdTag1.innerHTML = a[field];
+        trTag.append(tdTag1);
+     }
+
+     let tdTag2 = document.createElement('td');
+        let buttonTag = document.createElement('button');
+        buttonTag.innerHTML =  'OK';
+        tdTag2.append(buttonTag);
+        trTag.append(tdTag2);
+
+    }
+
+        
+</script>
+</body>
+</html>
