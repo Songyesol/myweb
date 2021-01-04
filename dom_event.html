@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_event.html</title>
+</head>
+<body>
+    <button id = 'btn'>OK👌</button><br>
+    <input type="text" id="name">
+
+    <script>
+        let name = document.getElementById('name');
+        name.onkeydown = function() {
+            console.log(name.value);
+            document.getElementById('btn').innerHTML;
+        }
+
+        let btn = document.getElementById('btn');
+        
+        btn.onclick = function () {
+            console.log('click');
+            window.alert('clicked');
+        }
+        btn.onmouseover = function() {
+            console.log('mouseover')
+            btn.style.backgroundColor = 'yellow';
+        }
+        btn.onmouseout = myMouseOut;
+
+        function myMouseOut() {
+            console.log( 'mouseout');
+            btn.style.backgroundColor = 'yellowgreen';
+        }
+        // console.log(window);
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean.html</title>
+</head>
+<body>
+    
+    <script>
+        //True or false 값을 담는 boolean타입
+        let trueOrFalse = (10 < 9) ; 
+        // = new Boolean(10<9);
+        //왠만하면 new라는 키워드로 타입을 선언하는 것을 지양. 
+
+        trueOrFalse = null ; 
+        //javascript에서 boolean은 변수안에 논리식이 아닌 단순한 값이라도 할당이 되어 있다면 true로 봄
+        //(마이너스값이라도.) 
+        // 변수가 0의 값을 가지거나 할당된 값이 없다면 false
+        if(trueOrFalse) {
+            console.log('참')
+        }else {
+            console.log('거짓')
+        }
+
+        let val1 = 100;
+        let val2 = '100';
+        if (val1 === val2) {
+             // == : 값이 같은지 비교
+             // === : 들어있는 값과 타입이 모두 동일한지 비교 (and)
+             // != : 값이 다른지 비교
+             // !== : 들어있는 값과 타입중 다른것이 있는지 비교 (or)
+            console.log('동일합니다.');
+        }else { 
+            console.log('다릅니다.');
+        }
+
+        //삼항연산자
+        let result = val2 > 100 ? '100보다 크다' : '100보다 작다';
+        console.log(result);
+        
+        result = {
+            name : 'Hong',
+            age : 20,
+            getName : function() {
+                console.log(this.name);
+            },
+            getInfo : function() {
+                return this.name + '-' + this.age;
+            },
+            get getAge(){ //function 아님
+                return this.age;
+            },
+            set setAge(age) { //function 아님
+                this.age = age;
+            }
+        }
+        result.setAge = 15 ;
+        console.log(result.getAge);
+        result.hobby = 'Reading';
+        result.getName();
+        console.log(result.getInfo()); //()을 넣으면 return구문에 해당되는 내용을 출력
+
+        //array일 경우 for of... 
+        //object일 for in ... 
+        let person = {
+            name : 'Hwang',
+            age : 10,
+            address : 'Seoul'
+        }
+
+        let personValue = Object.values(person);
+        //object에 담겨있는 값에 해당되는 부분만을 배열타입으로 출력
+
+        personValue = JSON.stringify(person);
+        console.log(personValue); 
+
+        // let persons = [person];
+        let persons= [];
+        persons.push(person);
+
+        for (person of persons) {
+            for( field in person) {
+                console.log(person[field]);
+            }
+        }
+
+        // let v = result; 
+        // result.age = 15;
+        // console.log(result.name, result.age);
+        // console.log(v.name, v.age, v.hobby); 
+        //동일한 오브젝트 주소값을 참조하고 있기 때문에 기존오브젝트가 바뀌면 바뀐 내용을 참조
+        
+        result = 'hello';
+        v=result;
+        result = 'World';
+        console.log(v);
+    </script>
+</body>
+</html>

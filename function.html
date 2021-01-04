@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function.html</title>
+</head>
+<body>
+    <div id = 'show'></div>
+    <script>
+        function sum(a,b){
+            return a+b;
+        }
+    let result = sum(10,20);
+    
+    function showElement() {
+        let h1 = document.createElement('h1');
+        h1.innerHTML = 'Hello';
+        return h1;
+    }
+    result = showElement();
+
+    function Person(name,age,hobby) { //생성자함수 만든것
+            this.name = name;
+            this.age = age;
+            this.hobby=hobby;
+        }    
+        let persons = [];
+        Person.prototype.phone = '010-1234-4567';
+        let p1 = new Person('Park', 20 ,'sleeping');
+        let p2 = new Person('Song' , 30 , 'Singing');
+        persons.push(p1);
+        persons.push(p2);
+        persons.push(new Person('Kim', 25 , 'game'));
+
+    function createTable(arys) {
+        // ==>persons 배열 
+        let table = document.createElement('table');
+        table.setAttribute('border', '1');
+        for( let i =0; i<arys.length ; i++) {
+            let trTag = document.createElement('tr');
+            table.append(trTag);    
+            for (field in arys[i]){
+                let tdTag = document.createElement('td');
+                tdTag.innerHTML = arys[i][field];
+                trTag.append(tdTag);
+            }
+
+        }
+        return table; //return구문을 만나면 해당하는 object 반환해줌
+    }
+    result = createTable(persons) ; 
+    document.getElementById('show').append(result);
+
+    let x = function(a,b) {
+        return a+b ; 
+    }
+    let y = x;
+    console.log(x(10,15));
+    console.log(y(20,25));
+
+    function findMax(a,b,c,d,e) {
+        console.log(arguments);
+        //arguments라는 오브젝트를 사용하면 
+        let max = 0;
+        for(let i =0; i<arguments.length; i++) {
+            if(arguments[i]>max) {
+                max = arguments[i];
+            }
+        }
+        return max ; 
+    }
+    result = findMax(1,3,5,8,7);
+    console.log(result);
+    </script>
+</body>
+</html>

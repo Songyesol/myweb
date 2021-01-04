@@ -17,7 +17,7 @@
 // tableTag.append(trTag);
 
 function showCal(yyyy,mm) {
-let calendar = new Date();
+let today = new Date(yyyy + "-" + mm + "01");
 let days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
 let year = calendar.getFullYear();

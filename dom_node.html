@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_node.html</title>
+</head>
+<body>
+    <h1>DOM lesson one</h1>
+    <p>Hello World</p>
+    <div id = 'show'></div> <!--<ul><li>One</li><li>Two</li><ul>-->
+
+    <script>
+
+        let ul = document.createElement('ul');
+        let li = document.createElement('li');
+        
+        //node기준으로 innerHTML처럼 넣기 
+        let text = document.createTextNode('One');
+        li.append(text);
+        ul.append(li);
+        document.getElementById('show').append(ul);
+        
+        
+        let bdy = document.getElementsByTagName('body');
+        console.log(bdy[0].childNodes[1].childNodes[0]);
+
+        let p =document.getElementsByTagName('p');
+        console.log(p[0].previousSibling.nodeValue = 'Hello~~😉');
+        //동일한 레벨의 앞요소  : previousSibling
+    </script>
+</body>
+</html>

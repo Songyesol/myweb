@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math.html</title>
+</head>
+<body>
+    <!--math클래스는 정적타입으로 사용-->
+    <script>
+        let vals = []; 
+        for(let i = 0; i<5; i++){ 
+            let val = Math.floor(Math.random()*6) + 1; 
+            //Math.random : 0 < X < 1 
+            //Math.floor를 넣으면 정수값 가져옴 
+            vals[i]=val;
+
+            for(let j = 0; j<i; j++){ 
+                //배열 안에 중복값을 제외하고 넣고싶다면 인덱스에 위치한 값과 
+                //랜덤으로 나오는 값이 같을때 인덱스 위치를 이전으로 돌리면 됨
+                if( vals[j] == val) {
+                    i--;
+                    break;
+            }
+        }
+        }
+        
+        console.log(vals);
+
+    </script>
+</body>
+</html>

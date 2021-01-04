@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom.html</title>
+    <style>
+        #container{
+            width : 400px;
+            height: 400px;
+            position: relative;
+            background-color: rgb(180, 226, 87);
+        }
+        #animate{
+            width: 250px;
+            height: 50px;
+            position: absolute;
+            background-color: rgb(233, 112, 202);
+        }
+    </style>
+</head>
+<body>
+    <button id = 'btn'>Move Start!!🎉</button>
+    <p></p>
+    <div id = 'container'>
+        <div id = 'animate'></div>
+    </div>
+
+    <script>
+        setInterval(() => {
+            document.getElementById('animate').innerHTML = new Date();
+        },1000);
+        
+
+        let btn = document.getElementById('btn');
+        btn.onclick = moveStart; //클릭할때 함수 작동
+
+        function moveStart() {
+            console.log('start!');
+            let animate = document.getElementById('animate');
+            let i = 0;
+            let myinterval = setInterval(() => {
+                i++;
+                animate.style.top = i+'px';
+                animate.style.left = i+'px';
+                if ( i == 350)
+                clearInterval(myinterval);
+
+            },10);
+        }
+    </script>
+    <!-- <div id = 'show'></div>
+    <div class='show'></div>
+
+    <script>
+        // let show = document.getElementById('show');
+
+        // //getElements~~ : 요소들을 배열의 형태(?)로 가지고 오겠다. 
+        // show = document.getElementsByClassName('show'); 
+        // //클래스 명으로 가지고 오는 type이 collection 타입
+        // show= document.getElementsByTagName('div');
+        // //태그명으로 가지고 오는 type이 collection 타입
+        // show=document.querySelectorAll('div>h3'); 
+        // //css선택자를 collection type. 
+        // for( let i =0 ;i<show.length; i++) {
+        //     show[i].innerHTML = i;
+        // }
+        // console.log(show);
+
+        //구구단을 생성
+        // makeMulti(7);
+        // function makeMulti(num) {
+        //     let h3 = document.createElement('h3');
+        //     h3.innerHTML = num + '단 구구단'
+        //     document.getElementById('show').append(h3);
+        //     let table = document.createElement('table');
+        //         table.setAttribute('border', '1');
+        //         document.getElementById('show').append(table);
+                
+        //         for(let i=1; i<=9; i++) {
+        //             let tr = document.createElement('tr');
+        //                 table.append(tr);
+        //             let td = document.createElement('td');
+        //             tr.append(td);
+        //             td.innerHTML = num;
+        //             let td1 = document.createElement('td');
+        //             tr.append(td1);
+        //             td1.innerHTML = '*';
+        //             let td2 = document.createElement('td');
+        //                 tr.append(td2);
+        //                 td2.innerHTML = i ;
+        //             let td3 = document.createElement('td');
+        //                 tr.append(td3);
+        //                 td3.innerHTML = '=';
+        //             let td4 = document.createElement('td');
+        //                 tr.append(td4);
+        //                 td4.innerHTML = num*i;
+        //         }
+        // }
+
+    </script>-->
+    
+
+</body>
+</html>
